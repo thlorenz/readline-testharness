@@ -1,0 +1,28 @@
+{
+  "name": "readline-testharness",
+  "version": "0.0.0",
+  "description": "Harness for testing modules that add functionality to the nodejs readline.",
+  "main": "readline-testharness.js",
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/thlorenz/readline-testharness.git"
+  },
+  "keywords": [
+    "readline",
+    "test",
+    "harness",
+    "mock",
+    "fake",
+    "stub",
+    "simulate"
+  ],
+  "author": "Thorsten Lorenz <thlorenz@gmx.de> (thlorenz.com)",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+  },
+  "dependencies": {
+  }
+}
