@@ -9,12 +9,12 @@ var wraprli= require('./module/totest')
   , createRli = harness.rli;
   , assert = require('assert');
 
-  var rli = createRli;
-    , hns = createHarness(wraprli, rli);
+var rli = createRli;
+  , hns = createHarness(wraprli, rli);
 
-  hns.key('b');
+hns.key('b');
 
-  assert.equal(hns.rli.wordLeft, 1, 'moves cursor one word left');
+assert.equal(hns.rli.wordLeft, 1, 'moves cursor one word left');
 ```
 
 ## Installation
@@ -46,11 +46,6 @@ var wraprli= require('./module/totest')
 ### ***harness.rli()***
 
 - creates a readline interface mock that keeps track of functions called and properties on it
+- it exposes properties of same name as the readline interface functions, i.e., `moveCursor` tracks calls to `_moveCursor` 
 - this can be used to create the default one and customize it before passing it to the harness
-
-### ***harness.rli()***
-
-- creates a readline interface mock
-- it exposes properties of same name as the readline interface functions, i.e., `moveCursor` tracks calls to
-  `_moveCursor`
 - for more info consult [its implementation](https://github.com/thlorenz/readline-testharness/blob/master/readline.js)
