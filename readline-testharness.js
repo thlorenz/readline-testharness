@@ -21,6 +21,7 @@ module.exports = function createHarness (readlineWrapper) {
 
     , resetModes : resetModes
     , reset      : reset
+
     // assign to function to perform extra reset steps with every reset
     , onreset    : undefined
   };
@@ -63,7 +64,8 @@ module.exports = function createHarness (readlineWrapper) {
     hns.written = [] ;
     hns.writtenStr = [];
     
-    hns.onreset();
+    // do more reset steps if the function is set
+    if (hns.onreset) hns.onreset();
     return hns;
   }
   reset();
