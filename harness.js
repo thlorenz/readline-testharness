@@ -55,7 +55,7 @@ module.exports = function createHarness (wraprli, createrli_) {
     hns.rli = createrli();
     hns.rlw = wraprli(hns.rli);
 
-    hns.keyed = hns.coded = hns.seqed = hns.pressed = undefined;
+    hns.keyed = hns.coded = hns.seqed = undefined;
     
     // do more reset steps if the function is set
     if (hns.onreset) hns.onreset();
