@@ -2,7 +2,6 @@
 
 var createRli = require('./readline')
   , parseKey = require('parse-key')
-  , stringifyKey = require('stringify-key')
   ;
 
 module.exports = function createHarness (readlineWrapper) { 

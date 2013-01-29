@@ -22,7 +22,6 @@
   "readmeFilename": "README.md",
   "devDependencies": {},
   "dependencies": {
-    "stringify-key": "~0.1.2",
     "parse-key": "~0.1.1"
   }
 }
