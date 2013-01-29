@@ -1,10 +1,9 @@
 'use strict';
 
-var createRli = require('./readline')
-  , parseKey = require('parse-key')
-  ;
+var parseKey = require('parse-key');
 
-module.exports = function createHarness (wraprli) { 
+module.exports = function createHarness (wraprli, createrli_) { 
+  var createrli = createrli_ || require('./readline');
   var hns = {
       rli        : undefined 
 
@@ -53,7 +52,7 @@ module.exports = function createHarness (wraprli) {
   }
 
   function reset() {
-    hns.rli = createRli();
+    hns.rli = createrli();
     hns.rlw = wraprli(hns.rli);
 
     hns.keyed = hns.coded = hns.seqed = hns.pressed = undefined;

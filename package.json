@@ -2,7 +2,7 @@
   "name": "readline-testharness",
   "version": "0.1.1",
   "description": "Harness for testing modules that add functionality to the nodejs readline.",
-  "main": "readline-testharness.js",
+  "main": "index.js",
   "scripts": {},
   "repository": {
     "type": "git",
