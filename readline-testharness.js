@@ -4,10 +4,11 @@ var createRli = require('./readline')
   , parseKey = require('parse-key')
   ;
 
-module.exports = function createHarness (readlineWrapper) { 
+module.exports = function createHarness (wraprli) { 
   var hns = {
       rli        : undefined 
-    , rlv        : undefined 
+      // wrapper returned by calling the wraprli
+    , rlw        : undefined
     , normal     : undefined
     , insert     : undefined
     , key        : key
@@ -56,7 +57,7 @@ module.exports = function createHarness (readlineWrapper) {
 
   function reset() {
     hns.rli = createRli();
-    hns.rlw = readlineWrapper(hns.rli);
+    hns.rlw = wraprli(hns.rli);
 
     hns.resetModes();
 
