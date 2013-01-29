@@ -1,6 +1,6 @@
 {
   "name": "readline-testharness",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Harness for testing modules that add functionality to the nodejs readline.",
   "main": "index.js",
   "scripts": {},
