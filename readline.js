@@ -1,30 +1,29 @@
 'use strict';
-/*jshint asi: true*/
 
 module.exports = function () {
   var self =  {
 
-      _ttyWrite        :  function (code, key) { this.ttyWrite.push({ code : code, key :  key }) }
-    , _moveCursor      :  function (arg) { this.moveCursor.push(arg) }
+      _ttyWrite        :  function (code, key) { this.ttyWrite.push({ code : code, key :  key }); }
+    , _moveCursor      :  function (arg) { this.moveCursor.push(arg); }
 
-    , _wordLeft        :  function () { this.wordLeft++ }
-    , _wordRight       :  function () { this.wordRight++ }
+    , _wordLeft        :  function () { this.wordLeft++; }
+    , _wordRight       :  function () { this.wordRight++; }
 
-    , _deleteLeft      :  function () { this.deleteLeft++ }
-    , _deleteRight     :  function () { this.deleteRight++ }
-    , _deleteWordLeft  :  function () { this.deleteWordLeft++ }
-    , _deleteWordRight :  function () { this.deleteWordRight++ }
-    , _deleteLineLeft  :  function () { this.deleteLineLeft++ }
-    , _deleteLineRight :  function () { this.deleteLineRight++ }
+    , _deleteLeft      :  function () { this.deleteLeft++; }
+    , _deleteRight     :  function () { this.deleteRight++; }
+    , _deleteWordLeft  :  function () { this.deleteWordLeft++; }
+    , _deleteWordRight :  function () { this.deleteWordRight++; }
+    , _deleteLineLeft  :  function () { this.deleteLineLeft++; }
+    , _deleteLineRight :  function () { this.deleteLineRight++; }
 
-    , _historyPrev     :  function () { this.historyPrev++ }
-    , _historyNext     :  function () { this.historyNext++ }
+    , _historyPrev     :  function () { this.historyPrev++; }
+    , _historyNext     :  function () { this.historyNext++; }
 
-    , _line            :  function () { this.line++ }
+    , _line            :  function () { this.line++; }
 
     , reset: function () {
       this.ttyWrite        =  [];
-      this.moveCursor      =  []
+      this.moveCursor      =  [];
 
       this.wordLeft        =  0;
       this.wordRight       =  0;
