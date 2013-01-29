@@ -9,7 +9,7 @@ var wraprli= require('./module/totest')
   , createRli = harness.rli;
   , assert = require('assert');
 
-var rli = createRli;
+var rli = createRli()
   , hns = createHarness(wraprli, rli);
 
 hns.key('b');
