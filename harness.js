@@ -27,12 +27,7 @@ module.exports = function createHarness (readlineVim_) {
 
   function key(k) {
     var keyObj;
-    try { 
-      keyObj = parseKey(k)
-    } catch(e) {
-      // XXX: probably should fix parse key to handle these cases (same for stringify key)
-      keyObj = { name: k }
-    }
+    keyObj = parseKey(k)
     hns.rli._ttyWrite(null, keyObj)
     hns.keyed = ' [' + k + '] '
   }
