@@ -19,7 +19,7 @@ module.exports = function () {
     , _historyPrev     :  function () { this.historyPrev++; }
     , _historyNext     :  function () { this.historyNext++; }
 
-    , _line            :  function () { this.line++; }
+    , _line            :  function () { this.lines++; }
 
     , reset: function () {
       this.ttyWrite        =  [];
@@ -38,7 +38,8 @@ module.exports = function () {
       this.historyPrev     =  0;
       this.historyNext     =  0;
 
-      this.line            =  0;
+      // rli itself has 'line', so we need to call it lines
+      this.lines           =  0;
     }
   };
 
