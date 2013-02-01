@@ -43,9 +43,6 @@ module.exports = function createHarness (wraprli, createrli_) {
   function seq(seq_) {
     var keys = seq_.split(' ');
 
-    // since we are dealing with a sequence here, it makes sense to reset
-    hns.reset();
-
     hns.key(keys.shift());
     hns.key(keys.shift());
     hns.seqed = ' [' + seq_ + '] ';
