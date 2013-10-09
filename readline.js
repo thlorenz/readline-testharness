@@ -4,7 +4,7 @@ module.exports = function () {
   var self =  {
 
       _ttyWrite        :  function (code, key) { this.ttyWrite.push({ code : code, key :  key }); }
-    , _moveCursor      :  function (arg) { this.moveCursor.push(arg); }
+    , _moveCursor      :  function (arg) { this.moveCursor.push(arg); this.line.push(arg); this.cursor = this.moveCursor.length }
 
     , _wordLeft        :  function () { this.wordLeft++; }
     , _wordRight       :  function () { this.wordRight++; }
@@ -20,6 +20,7 @@ module.exports = function () {
     , _historyNext     :  function () { this.historyNext++; }
 
     , _line            :  function () { this.lines++; }
+    , close            :  function () { this.closeCalled++; }
 
     , reset: function () {
       this.ttyWrite        =  [];
@@ -40,6 +41,9 @@ module.exports = function () {
 
       // rli itself has 'line', so we need to call it lines
       this.lines           =  0;
+      this.closeCalled     =  0;
+      this.line            =  [];
+      this.cursor          =  0;
     }
   };
 
